@@ -35,7 +35,7 @@
 				classie.remove( container, 'st-menu-open' );
 			},
 			bodyClickFn = function(evt) {
-				if( !hasParentClass( evt.target, 'st-menu' ) ) {
+				if( !hasParentClass( evt.target, 'st-menu' ) && !hasParentClass( evt.target, 'navbar' ) ) {
 					resetMenu();
 					document.removeEventListener( eventtype, bodyClickFn );
 					// callback to page..
