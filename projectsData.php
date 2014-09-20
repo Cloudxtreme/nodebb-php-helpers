@@ -11,7 +11,7 @@ $projects[0]["funding"] = "Community Funded";
 $projects[0]["progress"] = 80;
 $projects[0]["url"] = "http://www.blackhalo.info/";
 $projects[0]["startDate"] = "7th of July 2014";
-$projects[0]["endDate"] = "8th of July 2014";
+$projects[0]["endDate"] = "In Progress";
 
 $projects[1]["id"] = "blackmoon";
 $projects[1]["title"] = "<span class=\"semi-bold\">BlackMoon</span>";
@@ -20,7 +20,7 @@ custom BlackCoin ship to the moon in 2015.";
 $projects[1]["about"] = "Our ships will be custom designed on a CD shaped film with sensors, solar cells and tracking hardware. The craft will be track-able using Android and iPhones. The ship will have room for 40 passengers (your photo) and the BlackCoin logo.";
 $projects[1]["category"] = "Community Effort";
 $projects[1]["funding"] = "Community Funded";
-$projects[1]["progress"] = 99;
+$projects[1]["progress"] = 100;
 $projects[1]["url"] = "http://cryptohut.co.uk/blackmoon/#firstPage";
 $projects[1]["startDate"] = "11th of July 2014";
 $projects[1]["endDate"] = "Ship Launch Date TBD in 2015";
@@ -34,7 +34,7 @@ $projects[2]["funding"] = "Privately Funded";
 $projects[2]["progress"] = 50;
 $projects[2]["url"] = "http://www.blackwavelabs.com";
 $projects[2]["startDate"] = "7th of July 2014";
-$projects[2]["endDate"] = "TBA";
+$projects[2]["endDate"] = "In Progress";
 
 $projects[3]["id"] = "blacknode";
 $projects[3]["title"] = "<span class=\"semi-bold\">Project BlackNode</span>";
@@ -45,7 +45,7 @@ $projects[3]["funding"] = "Privately Funded";
 $projects[3]["progress"] = 50;
 $projects[3]["url"] = "http://www.blackwavelabs.com";
 $projects[3]["startDate"] = "7th of July 2014";
-$projects[3]["endDate"] = "TBA";
+$projects[3]["endDate"] = "In Progress";
 
 $projects[4]["id"] = "blackbit";
 $projects[4]["title"] = "<span class=\"semi-bold\">BlackBit</span>";
@@ -69,7 +69,7 @@ $projects[5]["funding"] = "Privately Funded";
 $projects[5]["progress"] = 90;
 $projects[5]["url"] = "http://www.blackwavelabs.com";
 $projects[5]["startDate"] = "7th of July 2014";
-$projects[5]["endDate"] = "TBA";
+$projects[5]["endDate"] = "In Progress";
 
 $projects[6]["id"] = "blkfeed";
 $projects[6]["title"] = "<span class=\"semi-bold\">Project Gotham (BLKFeed)</span>";
@@ -82,18 +82,30 @@ $projects[6]["url"] = "http://www.BLKFeed.com";
 $projects[6]["startDate"] = "7th of July 2014";
 $projects[6]["endDate"] = "21st of July 2014";
 
-$projects[6]["id"] = "blackvisa";
-$projects[6]["title"] = "<span class=\"semi-bold\">Project BlackVISA</span>";
-$projects[6]["description"] = "A plugin to accept BC via PayPal or CoinKite and liquidate it; anywhere on the web.";
-$projects[6]["about"] = "BlackVISA (just a project name, temporary -- don't worry VISA) is named as such for its functionality. This plugin was created so you could essentially 'Accept BC Anywhere'."
+$projects[7]["id"] = "blackvisa";
+$projects[7]["title"] = "<span class=\"semi-bold\">Project BlackVISA</span>";
+$projects[7]["description"] = "A plugin to accept BC via PayPal or CoinKite and liquidate it; anywhere on the web.";
+$projects[7]["about"] = "BlackVISA (just a project name, temporary -- don't worry VISA) is named as such for its functionality. This plugin was created so you could essentially 'Accept BC Anywhere'."
         . "using the open source plugin you can tap into (currently) CoinKite or PayPals API in order to automatically liquidates BlackCoin payments and only requires a btc buffer on it for it to function."
         . "This open source solution can be applied to almost any e-commerce website as a means to accept BlackCoin for payment. ";
-$projects[6]["category"] = "Enterprise/Merchant Services";
-$projects[6]["funding"] = "Privately Funded";
-$projects[6]["progress"] = 55;
-$projects[6]["url"] = "https://github.com/blkmaarx/blackvisa";
-$projects[6]["startDate"] = "22nd of July 2014";
-$projects[6]["endDate"] = "TBD";
+$projects[7]["category"] = "Enterprise/Merchant Services";
+$projects[7]["funding"] = "Privately Funded";
+$projects[7]["progress"] = 55;
+$projects[7]["url"] = "https://github.com/blkmaarx/blackvisa";
+$projects[7]["startDate"] = "22nd of July 2014";
+$projects[7]["endDate"] = "TBD";
+
+
+$projects[8]["id"] = "blkbox";
+$projects[8]["title"] = "<span class=\"semi-bold\">Project Sentinel (BLKBox)</span>";
+$projects[8]["description"] = "A top secret hardware project.";
+$projects[8]["about"] = "A project created to truly bring BlackCoin to the masses in the most innovative way we thought possible.";
+$projects[8]["category"] = "BlackCoin Hardware";
+$projects[8]["funding"] = "Privately Funded";
+$projects[8]["progress"] = 60;
+$projects[8]["url"] = "http://www.BLKFeed.com";
+$projects[8]["startDate"] = "1st of July 2014";
+$projects[8]["endDate"] = "21st of July 2014";
 
 echo json_encode($projects);
 ?>
