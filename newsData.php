@@ -66,7 +66,11 @@ $data[] = array("id"=>56, "title"=>"News: Blackcoin to be added as a trading pai
 $data[] = array("id"=>57, "title"=>"Alert: Vizique shares his ventures at the InsideBitcoins conference thus far.", "url"=>"http://www.reddit.com/r/blackcoin/comments/2ghgct/spare_some_bcbtc_and_lets_get_viqizue_to_the_coin/ckkpjsu");
 $data[] = array("id"=>58, "title"=>"Alert: BlackCoin to be added to Danish Exchange CCEDK (that's 3 in 2 weeks ^.^)", "url"=>"https://bitcointalk.org/index.php?topic=785915.msg8857499#msg8857499");
 $data[] = array("id"=>59, "title"=>"Alert: If you missed it live check out Jabulon on BlogTalkRadio talking about BlackCoin.", "url"=>"http://www.blogtalkradio.com/garrettmiller/2014/09/17/david-cohen-blackcoin-music-concept-and-so-much-more-live.mp3?localembed=download");
-
+$data[] = array("id"=>60, "title"=>"CryptoArticles (Partner): MEET BLACKHASHLET, BLACKCOIN'S NEW MINING FUND PROJECT", "url"=>"http://www.cryptoarticles.com/crypto-news/meet-blackhashlet-blackcoins-new-mining-fund-project");
+$data[] = array("id"=>61, "title"=>"News: BlackCoin added to NXT Asset Exchange MultiGateway", "url"=>"https://twitter.com/CoinBlack/status/515900305213755392");
+$data[] = array("id"=>62, "title"=>"Must Watch: Gritt gives a recap of his China adventure to Huobi and OkCoin/Shanghai (Part 1)", "url"=>"http://www.youtube.com/watch?v=oqG2E5u-HT8&feature=youtu.be");
+$data[] = array("id"=>63, "title"=>"News: BitHalo/BlackHalo mentioned in latest InsideBitcoins post.", "url"=>"http://insidebitcoins.com/news/10-bitcoin-projects-that-make-altcoins-and-appcoins-irrelevant-part-1/25016");
+$data[] = array("id"=>64, "title"=>"CoinTelegraph: The Alt-Cracks: Altcoin Stories That Slipped Through The Cracks", "url"=>"http://cointelegraph.com/news/112672/the-alt-cracks-altcoin-stories-that-slipped-through-the-cracks");
 
 
 
