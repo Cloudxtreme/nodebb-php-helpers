@@ -101,46 +101,44 @@ if($type=="exchange"){
 		// http://api.btc38.com/v1/ticker.php?c=bc&mk_type=btc	
 		// http://data.bter.com/api/1/ticker/BC_BTC	
 		// http://data.bter.com/api/1/ticker/BC_CNY
-	} else if ($type == "buypressure"){
-		if (isset($id) && strtolower($id) == strtolower("blackcoinpool")) {
-			$hashrates_url = "http://blackcoinpool.com/api/stats/";
-			$hashrates = objectToArray(json_decode(file_get_contents($hashrates_url)));
+	} 
+	echo json_encode($data);
+} else if ($type == "buypressure"){
+	if (isset($id) && strtolower($id) == strtolower("blackcoinpool")) {
+		$hashrates_url = "http://blackcoinpool.com/api/stats/";
+		$hashrates = objectToArray(json_decode(file_get_contents($hashrates_url)));
 
-			$profitabilities_url = "http://blackcoinpool.com/api/profitability/";
-			$profitabilities = objectToArray(json_decode(file_get_contents($profitabilities_url)));
+		$profitabilities_url = "http://blackcoinpool.com/api/profitability/";
+		$profitabilities = objectToArray(json_decode(file_get_contents($profitabilities_url)));
 
-			$scryptHash = $hashrates["results"][0]["hashrate"] / 1000000;
-			$sha256Hash = $hashrates["results"][1]["hashrate"] / 1000000;
-			$x11Hash = $hashrates["results"][2]["hashrate"] / 1000000;
-			$scryptnHash = $hashrates["results"][3]["hashrate"] / 1000000;
-			$scrypt = $scryptHash * $profitabilities["results"][0]["profitability"];
-			$sha256 = $sha256Hash * $profitabilities["results"][1]["profitability"] / 1000 / 85; // per 85ghs
-			$x11 = $x11Hash * $profitabilities["results"][2]["profitability"] / 4; // per 4 mhs
-			$scryptn = $scryptnHash * $profitabilities["results"][3]["profitability"] * 2; // per 0.5 mhs
+		$scryptHash = $hashrates["results"][0]["hashrate"] / 1000000;
+		$sha256Hash = $hashrates["results"][1]["hashrate"] / 1000000;
+		$x11Hash = $hashrates["results"][2]["hashrate"] / 1000000;
+		$scryptnHash = $hashrates["results"][3]["hashrate"] / 1000000;
+		$scrypt = $scryptHash * $profitabilities["results"][0]["profitability"];
+		$sha256 = $sha256Hash * $profitabilities["results"][1]["profitability"] / 1000 / 85; // per 85ghs
+		$x11 = $x11Hash * $profitabilities["results"][2]["profitability"] / 4; // per 4 mhs
+		$scryptn = $scryptnHash * $profitabilities["results"][3]["profitability"] * 2; // per 0.5 mhs
 
-			$total_btc = $scrypt + $sha256 + $x11 + $scryptn;
+		$total_btc = $scrypt + $sha256 + $x11 + $scryptn;
 
-			$mintpal_stats = json_decode(file_get_contents("https://api.mintpal.com/market/stats/BC/BTC"), true);
+		$mintpal_stats = json_decode(file_get_contents("https://api.mintpal.com/market/stats/BC/BTC"), true);
 
-			$data["24hlow"] = $mintpal_stats[0]["24hlow"];
-			$data["24hhigh"] = $mintpal_stats[0]["24hhigh"];
+		$data["24hlow"] = $mintpal_stats[0]["24hlow"];
+		$data["24hhigh"] = $mintpal_stats[0]["24hhigh"];
 
-			$average = ($data["24hlow"] + $data["24hhigh"]) / 2;
+		$average = ($data["24hlow"] + $data["24hhigh"]) / 2;
 
-			if ($average > 0){
-				$total_BC = round($total_btc / $average, 2) . " BC";
-				$file = file_put_contents ( "bcp_helper.txt" , $total_BC );
-			}
-			if($total_BC){
-				echo $total_BC;
-			} else {
-				echo file_get_contents('bcp_helper.txt', true);
-			}
+		if ($average > 0){
+			$total_BC = round($total_btc / $average, 2) . " BC";
+			$file = file_put_contents ( "bcp_helper.txt" , $total_BC );
+		}
+		if($total_BC){
+			echo $total_BC;
+		} else {
+			echo file_get_contents('bcp_helper.txt', true);
 		}
 	}
-	if ($type != "buypressure")
-		echo json_encode($data);
-}
-// else 
-//    echo $total_BC = ""
+}	
+
 //http://www.altmining.farm/api.php?method=paidcoins&display=human
