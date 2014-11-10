@@ -18,7 +18,7 @@ if($type=="exchange"){
 	$data = array();
 	$proceed = true;
 	
-	$helperFile = $id . "_helper.txt";
+	$helperFile = "helperFile_$id.txt";
 	if(file_exists($helperFile)){
 		$data = objectToArray(json_decode(file_get_contents($helperFile, true)));
 		$tDiff = time()-$data["ts"];
