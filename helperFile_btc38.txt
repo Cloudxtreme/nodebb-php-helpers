@@ -1,1 +1,1 @@
-{"ts":1415615238,"24hlow":9345,"24hhigh":10348,"24hvol":62.09,"24hvol_bc":664412.19,"last_price":9345,"cts":1415615238,"tdiff":62}
+{"cts":1417132395,"tdiff":62,"ts":1417132395,"24hlow":0,"24hhigh":0,"24hvol":0,"24hvol_bc":0,"last_price":0}
